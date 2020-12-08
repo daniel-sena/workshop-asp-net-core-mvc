@@ -40,17 +40,27 @@ namespace SalesWebMVC
             options.UseMySql(Configuration.GetConnectionString("SalesWebMVCContext"),
             builder =>builder.MigrationsAssembly("SalesWebMVC")));
 
+<<<<<<< HEAD
             services.AddScoped<SeedingService>();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env,SeedingService seedingService)
+=======
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+>>>>>>> ffd6d5d548c8228e0962169fd4a2fccdeb872c75
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+<<<<<<< HEAD
                 seedingService.Seed();
+=======
+>>>>>>> ffd6d5d548c8228e0962169fd4a2fccdeb872c75
             }
             else
             {

@@ -15,9 +15,13 @@ namespace SalesWebMVC.Models
         {
         }
 
+<<<<<<< HEAD
 
 
         public Department(int id, string name)
+=======
+        public Department(int id, string name, ICollection<Seller> sellers)
+>>>>>>> ffd6d5d548c8228e0962169fd4a2fccdeb872c75
         {
             Id = id;
             Name = name;
