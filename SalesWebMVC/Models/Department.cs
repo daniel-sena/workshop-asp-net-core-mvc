@@ -32,5 +32,7 @@ namespace SalesWebMVC.Models
             var total = Sellers.Select(s => s.TotalSales(initial, final)).Sum();
             return total;
         }
+
+
     }
 }
