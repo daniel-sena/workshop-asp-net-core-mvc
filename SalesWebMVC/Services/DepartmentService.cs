@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesWebMVC.Services
 {
@@ -17,9 +18,10 @@ namespace SalesWebMVC.Services
             _context = context;
         }
 
-        public List<Department> FindAll()
+        public  async Task<List<Department>> FindAllAssync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
 
         public void Inset(Department department)
